@@ -1,13 +1,61 @@
-# Sistema de Gestión de Parking (Java)
+# Sistema de Gestión de Parking
 
-Este programa simula el funcionamiento de un sistema de gestión de parking en **Java**. El parking es cuadrado y está representado en un array bidimensional de 10x10. Las columnas impares se recorren de abajo hacia arriba, mientras que las columnas pares se recorren de arriba hacia abajo. El sistema gestiona las plazas del parking, las entradas y salidas de vehículos, el saldo acumulado del día y más.
+**Sistema de Gestión de Parking** es una aplicación diseñada para simular la administración de un parking de vehículos. El sistema gestiona la entrada y salida de vehículos, visualiza el estado del parking, calcula el saldo acumulado del día y proporciona información detallada sobre los vehículos estacionados y las plazas disponibles.
 
-## Estructura del Parking
+## Características
 
-El parking se representa como una cuadrícula de 10x10, donde las plazas de aparcamiento se numeran de la siguiente manera:
+- **Registro de Entrada y Salida de Vehículos**: Permite registrar la entrada y salida de vehículos del parking. 
+- **Gestión de Tipos de Vehículos**: Identifica y clasifica los vehículos como **Coche**, **Moto**, **Furgoneta** o **Autobús**. 
+- **Plazas Disponibles**: Permite consultar el número de plazas disponibles en el parking y verifica si el parking está completo.
+- **Estado del Parking**: Imprime el estado actual de todas las plazas en el parking, indicando cuáles están ocupadas y cuáles están libres.
+- **Saldo Acumulado**: Calcula y muestra el importe total recaudado por las tarifas de estacionamiento durante el día.
+- **Listado de Vehículos**: Muestra un listado con los vehículos que actualmente están estacionados en el parking.
+
+## Funcionalidades Detalladas
+
+### 1. **Entrada de Vehículo**
+   - Registra la entrada de un vehículo al parking.
+   - Solicita los datos del vehículo (matrícula y tipo).
+   - Si es una **furgoneta**, se solicita la longitud. 
+   - Si es un **autobús**, se solicita el número de plazas.
+   - Los datos se almacenan en **mayúsculas**.
+   - Se asigna el vehículo a una plaza disponible en el parking y se actualiza el número de plazas disponibles.
+
+### 2. **Salida de Vehículo**
+   - Registra la salida de un vehículo del parking.
+   - Calcula el importe basado en la tarifa del tipo de vehículo.
+   - Actualiza el estado del parking y el número de plazas disponibles.
+
+### 3. **Número de Plazas Disponibles**
+   - Muestra el número total de plazas disponibles en el parking.
+   - Si el número de plazas disponibles es 0, el parking se considera **COMPLETO**.
+
+### 4. **Imprimir Estado del Parking**
+   - Imprime el estado de todas las plazas en el parking.
+   - Indica qué plazas están ocupadas y qué plazas están libres.
+
+### 5. **Saldo Acumulado del Día**
+   - Muestra el saldo total acumulado durante el día por los cobros de las tarifas de los vehículos que han salido del parking.
+
+### 6. **Listado de Vehículos**
+   - Muestra un listado de todos los vehículos que actualmente están estacionados en el parking.
+
+## Tipos de Vehículos
+
+El sistema admite los siguientes tipos de vehículos, cada uno con su tarifa correspondiente:
+
+- **Coche**: Tarifa por hora: 5€
+- **Moto**: Tarifa por hora: 3€
+- **Furgoneta**: Tarifa por hora: 7€ (Se solicita la longitud de la furgoneta).
+- **Autobús**: Tarifa por hora: 10€ (Se solicita el número de plazas del autobús).
+
+## Representación del Parking
+
+El parking es representado por un array bidimensional de 10x10, donde las columnas pares se recorren de **arriba a abajo** y las columnas impares de **abajo a arriba**. Cada plaza de estacionamiento puede estar **ocupada** por un vehículo o **libre**.
+
+El estado del parking se visualiza de la siguiente manera:
 	
- NOTA: Las flechas hacia abajo y arriba simulan el sentido de
-	los carriles por los que circularían los coches. 
+NOTA: Las flechas hacia abajo y arriba simulan el sentido de los carriles por los que circularían los coches. 
 		
 		//   1     20     21      .. .. .. .. .. ..  100 
 		//   2  |  19     22  |   ..                  99
@@ -25,102 +73,66 @@ El parking se representa como una cuadrícula de 10x10, donde las plazas de apar
 - Las **columnas pares** (2, 4, 6...) se recorren de **arriba a abajo**.
 - Las **columnas impares** (1, 3, 5...) se recorren de **abajo hacia arriba**.
 
-## Funciones Principales
 
-### 1. **Entrada y salida de vehículos:**
-   - El sistema permite registrar la **entrada** y la **salida** de vehículos, controlando las plazas ocupadas y libres.
-   - Cuando un vehículo sale, la plaza se libera.
+## Requisitos
 
-### 2. **Número de plazas disponibles:**
-   - El sistema calcula el número de plazas libres y lo muestra en el cartel de entrada.
-   - Si el parking está **completo** (sin plazas disponibles), se muestra un mensaje indicando que el parking está lleno.
+Antes de ejecutar el programa, asegúrate de tener los siguientes requisitos:
 
-### 3. **Estado del parking:**
-   - Se puede **imprimir el estado** del parking, mostrando las plazas ocupadas, libres y el número de plazas disponibles.
+- **JDK 8 o superior**: [Descargar JDK](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- **IDE Java** (Recomendado): Eclipse, IntelliJ IDEA, NetBeans, etc.
 
-### 4. **Saldo acumulado del día:**
-   - Se almacena el **importe total cobrado** por el uso del parking durante el día.
+## Instalación
 
-### 5. **Lista de vehículos:**
-   - Se mantiene una lista con los vehículos que están actualmente dentro del parking.
-   - Se puede consultar esta lista en cualquier momento.
+1. Clona el repositorio a tu máquina local:
 
-## Tipos de Vehículos
+   ```bash
+   git clone https://github.com/usuario/sistema-parking.git
 
-El sistema distingue entre los siguientes tipos de vehículos:
-- **Coche**
-- **Moto**
-- **Furgoneta**
-- **Autobús**
+  Uso
+Una vez que el proyecto esté ejecutándose, puedes interactuar con el sistema utilizando las siguientes opciones:
 
-### Información de los vehículos:
-- Se recopilan los datos del vehículo, que incluyen:
-  - **Tipo de vehículo** (Coche, Moto, Furgoneta, Autobús)
-  - **Placa de matrícula**
-  - **Modelo**
-  - **Marca**
-  - Si es una **furgoneta**, se solicita la **longitud**.
-  - Si es un **autobús**, se solicita el **número de plazas**.
+Entrada de Vehículo: Registra un vehículo ingresando la matrícula y el tipo. Si es una furgoneta, se pedirá la longitud; si es un autobús, el número de plazas.
 
-### Formato de almacenamiento:
-Los datos de los vehículos se almacenan en **mayúsculas** para garantizar uniformidad.
+Salida de Vehículo: Registra la salida de un vehículo, calcula el importe correspondiente según la tarifa, y actualiza el estado del parking.
 
-## Funciones adicionales
+Consultar Plazas Disponibles: Muestra cuántas plazas están libres en el parking.
 
-- **Plazas ocupadas/libres:**
-  - El sistema mantiene un seguimiento de qué plazas están **ocupadas** y cuáles están **libres**.
+Imprimir Estado del Parking: Imprime un resumen visual del estado de las plazas del parking, con información de las plazas ocupadas y libres.
 
-- **Carta de precios:**
-  - Los precios de las diferentes categorías de vehículos están definidos como constantes dentro del código.
-  - A futuro, se podría mejorar este sistema utilizando un archivo de configuración (por ejemplo, un archivo de propiedades).
+Saldo Acumulado: Muestra el total recaudado por el parking durante el día.
 
-## Ejemplo de uso
+Listado de Vehículos: Muestra un listado con todos los vehículos que están estacionados en el parking.
 
-```java
-public class Main {
-    public static void main(String[] args) {
-        Parking parking = new Parking();
+Contribuir
+Las contribuciones al proyecto son bienvenidas. Para contribuir, sigue estos pasos:
 
-        Registrar entrada de vehículos
-        parking.entrada("Coche", "ABC123", "Ford Fiesta");
-        parking.entrada("Moto", "XYZ789", "Yamaha YZF-R1");
+Haz un fork del repositorio.
 
-        Consultar el estado del parking
-        parking.imprimirEstado();
+Crea una nueva rama para tus cambios:
+git checkout -b feature/nueva-funcionalidad
 
-        Ver número de plazas disponibles
-        System.out.println(parking.plazasDisponibles());
+Realiza los cambios y haz un commit:
+git commit -am 'Agregada nueva funcionalidad'
 
-        Consultar saldo acumulado del día
-        System.out.println(parking.saldoAcumulado());
-    }
-}
+Haz push a tu rama:
+git push origin feature/nueva-funcionalidad
 
-Requerimientos
-Lenguaje de programación: Java 8 o superior
+Abre un pull request describiendo los cambios realizados.
 
-Bibliotecas necesarias: Ninguna externa, solo bibliotecas estándar de Java.
+Licencia
+Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
 
-Cómo ejecutar el proyecto
-Clona este repositorio en tu máquina local.
-
-Asegúrate de tener Java 8 o superior instalado.
-
-Compila el proyecto con javac y ejecuta el archivo principal Main.java para iniciar el sistema de parking.
-
-javac Main.java
-java Main
+Contacto
+Si tienes alguna pregunta o necesitas soporte, puedes ponerte en contacto con el autor a través de [tu correo o enlace de contacto].
 
 
-### Detalles importantes:
+### Explicación de los elementos clave:
 
-1. **Requerimientos**: El archivo ahora menciona que el proyecto está hecho en **Java 8 o superior**.
-2. **Ejemplo de código**: El ejemplo de uso es ahora en **Java**, usando clases y métodos típicos en este lenguaje.
-3. **Ejecución**: La forma de ejecutar el programa se ha ajustado a cómo se compilan y ejecutan los programas Java desde la terminal.
+1. **Registro de Entrada y Salida**: Detalla cómo se gestionan las entradas y salidas de los vehículos, incluyendo el tratamiento de los tipos de vehículos especiales como furgonetas y autobuses.
+2. **Plazas Disponibles y Estado del Parking**: Explica cómo se lleva un registro de las plazas disponibles y cómo se visualiza el estado del parking.
+3. **Saldo Acumulado**: Indica cómo el sistema calcula y muestra el saldo acumulado del día por los cobros de los vehículos que han salido.
+4. **Tipos de Vehículos y Tarifas**: Se explican las tarifas para cada tipo de vehículo y el procedimiento para la solicitud de información adicional en el caso de furgonetas y autobuses.
+5. **Instalación y Uso**: Instrucciones claras sobre cómo instalar y ejecutar el proyecto.
+6. **Contribuciones**: Instrucciones para quienes deseen contribuir al proyecto.
 
-Este `README.md` actualizado debe ser más adecuado para un proyecto en Java. ¡Espero que te ayude! Si necesitas alguna modificación o detalle adicional, no dudes en decírmelo.
-
-  
-
-
-
+Este README proporciona toda la información necesaria para entender y usar el software de parking de manera efectiva.
