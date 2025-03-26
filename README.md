@@ -88,43 +88,30 @@ Antes de ejecutar el programa, asegúrate de tener los siguientes requisitos:
    ```bash
    git clone https://github.com/usuario/sistema-parking.git
 
-  Uso
+ ## Uso
+
 Una vez que el proyecto esté ejecutándose, puedes interactuar con el sistema utilizando las siguientes opciones:
 
-Entrada de Vehículo: Registra un vehículo ingresando la matrícula y el tipo. Si es una furgoneta, se pedirá la longitud; si es un autobús, el número de plazas.
+- **Entrada de Vehículo**: Registra un vehículo ingresando la matrícula y el tipo. Si es una furgoneta, se pedirá la longitud; si es un autobús, el número de plazas.
+  
+- **Salida de Vehículo**: Registra la salida de un vehículo, calcula el importe correspondiente según la tarifa, y actualiza el estado del parking.
 
-Salida de Vehículo: Registra la salida de un vehículo, calcula el importe correspondiente según la tarifa, y actualiza el estado del parking.
+- **Consultar Plazas Disponibles**: Muestra cuántas plazas están libres en el parking.
 
-Consultar Plazas Disponibles: Muestra cuántas plazas están libres en el parking.
+- **Imprimir Estado del Parking**: Imprime un resumen visual del estado de las plazas del parking, con información de las plazas ocupadas y libres.
 
-Imprimir Estado del Parking: Imprime un resumen visual del estado de las plazas del parking, con información de las plazas ocupadas y libres.
+- **Saldo Acumulado**: Muestra el total recaudado por el parking durante el día.
 
-Saldo Acumulado: Muestra el total recaudado por el parking durante el día.
+- **Listado de Vehículos**: Muestra un listado con todos los vehículos que están estacionados en el parking.
 
-Listado de Vehículos: Muestra un listado con todos los vehículos que están estacionados en el parking.
+## Contribuir
 
-Contribuir
 Las contribuciones al proyecto son bienvenidas. Para contribuir, sigue estos pasos:
 
-Haz un fork del repositorio.
-
-Crea una nueva rama para tus cambios:
-git checkout -b feature/nueva-funcionalidad
-
-Realiza los cambios y haz un commit:
-git commit -am 'Agregada nueva funcionalidad'
-
-Haz push a tu rama:
-git push origin feature/nueva-funcionalidad
-
-Abre un pull request describiendo los cambios realizados.
-
-Licencia
-Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
-
-Contacto
-Si tienes alguna pregunta o necesitas soporte, puedes ponerte en contacto con el autor a través de [tu correo o enlace de contacto].
-
+1. Haz un **fork** del repositorio.
+2. Crea una **nueva rama** para tus cambios:
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
 
 ### Explicación de los elementos clave:
 
