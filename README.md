@@ -11,6 +11,8 @@
 - **Saldo Acumulado**: Calcula y muestra el importe total recaudado por las tarifas de estacionamiento durante el día.
 - **Listado de Vehículos**: Muestra un listado con los vehículos que actualmente están estacionados en el parking.
 
+![Java aplication terminal](https://github.com/user-attachments/assets/9cfb8b31-abea-48cd-b6d1-32d7370f80a1)
+
 ## Funcionalidades Detalladas
 
 ### 1. **Entrada de Vehículo**
@@ -49,6 +51,8 @@ El sistema admite los siguientes tipos de vehículos, cada uno con su tarifa cor
 - **Furgoneta**: Tarifa por hora: 7€ (Se solicita la longitud de la furgoneta).
 - **Autobús**: Tarifa por hora: 10€ (Se solicita el número de plazas del autobús).
 
+![Rellenando datos vehiculos](https://github.com/user-attachments/assets/becd98b9-9afe-4d0b-be46-32b0bb8bff9d)
+
 ## Representación del Parking
 
 El parking es representado por un array bidimensional de 10x10, donde las columnas pares se recorren de **arriba a abajo** y las columnas impares de **abajo a arriba**. Cada plaza de estacionamiento puede estar **ocupada** por un vehículo o **libre**.
@@ -73,6 +77,7 @@ NOTA: Las flechas hacia abajo y arriba simulan el sentido de los carriles por lo
 - Las **columnas pares** (2, 4, 6...) se recorren de **arriba a abajo**.
 - Las **columnas impares** (1, 3, 5...) se recorren de **abajo hacia arriba**.
 
+![impresión datos vehículos](https://github.com/user-attachments/assets/74532405-918c-472e-89a2-2a8e77dd17e1)
 
 ## Requisitos
 
