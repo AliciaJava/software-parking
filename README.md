@@ -118,13 +118,3 @@ Las contribuciones al proyecto son bienvenidas. Para contribuir, sigue estos pas
    ```bash
    git checkout -b feature/nueva-funcionalidad
 
-### Explicación de los elementos clave:
-
-1. **Registro de Entrada y Salida**: Detalla cómo se gestionan las entradas y salidas de los vehículos, incluyendo el tratamiento de los tipos de vehículos especiales como furgonetas y autobuses.
-2. **Plazas Disponibles y Estado del Parking**: Explica cómo se lleva un registro de las plazas disponibles y cómo se visualiza el estado del parking.
-3. **Saldo Acumulado**: Indica cómo el sistema calcula y muestra el saldo acumulado del día por los cobros de los vehículos que han salido.
-4. **Tipos de Vehículos y Tarifas**: Se explican las tarifas para cada tipo de vehículo y el procedimiento para la solicitud de información adicional en el caso de furgonetas y autobuses.
-5. **Instalación y Uso**: Instrucciones claras sobre cómo instalar y ejecutar el proyecto.
-6. **Contribuciones**: Instrucciones para quienes deseen contribuir al proyecto.
-
-Este README proporciona toda la información necesaria para entender y usar el software de parking de manera efectiva.
